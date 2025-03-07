@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import App1 from './App1';
+import App2 from './App2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App1 name="VANKAYALA SRIHITHA" age={18}/> */}
+    {/* passing property with name */}
+    <App2/>
   </React.StrictMode>
 );
 
