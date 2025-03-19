@@ -1,9 +1,31 @@
-import "./Header.css";
-export default function Header() {
-  return (
-    <div className="App-Header-Row">
-      <h1>My React Store</h1>
-      <div>Menu</div>
-    </div>
-  );
+import "./Header.css"
+import { Link } from "react-router-dom"
+export default function Header(){
+    return(
+        <div className="App-Header-Row">
+            <div>React Store</div>
+            <div>
+                <Link to="home">Home</Link>|
+                <Link to="cart">Cart</Link>|
+                <Link to="login" >Login</Link>
+            </div>
+        </div>
+    )
 }
+
+
+// import Cart from "./Cart";
+// import "./Header.css";
+// import { Link } from "react-router-dom";
+// export default function Header() {
+//   return (
+//     <div className="App-Header-Row">
+//       <h1>My React Store</h1>
+//       <div>
+//         <Link to="home">Home</Link>
+//         <Link to="cart">Cart</Link>
+//         <Link to="login" >Login</Link>
+//         </div>
+//     </div>
+//   );
+// }

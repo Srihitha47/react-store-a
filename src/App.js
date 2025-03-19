@@ -1,18 +1,23 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Products from './components/Products';
-
-// import './App.css';
-
-function App() {
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Cart from "./components/Cart";
+import Login from "./components/Login";
+import Products from "./components/Products";
+import Register from "./components/Register";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+function App(props) {
   return (
-    <div>
-    <Header/>
-    <Products/>
-    <Footer/>
-    </div>
-
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route index element={<Products />} />
+        <Route path="home" element={<Products />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="login" element={<Login />} />
+        <Route path="Register" element={<Register />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
-
 export default App;
