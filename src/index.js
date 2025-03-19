@@ -16,7 +16,7 @@ root.render(
   <React.StrictMode>
     {/* <App1 name="VANKAYALA SRIHITHA" age={18}/> */}
     {/* passing property with name */}
-    <App6 />
+    <App />
   </React.StrictMode>
 );
 
