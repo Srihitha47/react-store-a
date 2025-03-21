@@ -8,6 +8,9 @@ export default function Register() {
   const handleSubmit = () => {
     setUsers([...users, user]);
   };
+  const handleDelete = (value) => {
+    setUsers(users.filter((element) => element !== value));
+  };
   return (
     <div className="App-Row">
       <div>
@@ -43,7 +46,7 @@ export default function Register() {
       <div>
         {
           users && users.map((value,index)=>(
-            <li>{value.name}-{value.email}-{value.password}</li>
+            <li>{value.name}-{value.email}-{value.password}  <button onClick={() => handleDelete(value)}>Delete</button></li>
           ))
         }
       </div>
