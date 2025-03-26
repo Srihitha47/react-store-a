@@ -13,11 +13,7 @@ export default function Register() {
   };
 
   
-  const duplicate=users.some((u)=>u.email===user.email && u.name===user.name && u.password===user.password);
-  if(duplicate){
-   alert("Duplicate users");
-   return;
-  }
+  
 
 
   return (
