@@ -11,6 +11,15 @@ export default function Register() {
   const handleDelete = (value) => {
     setUsers(users.filter((element) => element !== value));
   };
+
+  
+  const duplicate=users.some((u)=>u.email===user.email && u.name===user.name && u.password===user.password);
+  if(duplicate){
+   alert("Duplicate users");
+   return;
+  }
+
+
   return (
     <div className="App-Row">
       <div>
