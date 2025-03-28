@@ -6,6 +6,7 @@ import { appContext } from "../App";
 export default function Products() {
     const { user, setUser, users, setUsers } = useContext(appContext);
     
+    
     const products= [ 
 
         {

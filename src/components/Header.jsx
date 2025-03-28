@@ -3,10 +3,10 @@ import { Link } from "react-router-dom"
 import { useContext } from "react";
 import { appContext } from "../App";
 export default function Header(){
-    const { user, setUser, users, setUsers } = useContext(appContext);
+    const { user,} = useContext(appContext);
     return(
         <div className="App-Header-Row">
-            <div>React Store-{user.name}</div>
+            <div>React Store-[{user.name}]</div>
             <div>
                 <Link to="home">Home</Link>|
                 <Link to="cart">Cart</Link>|
