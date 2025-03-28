@@ -5,11 +5,14 @@ import "./Register.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { appContext } from "../App";
+import { useNavigate } from "react-router-dom";
 export default function Register() {
+   const Navigate = useNavigate();
   const { user, setUser, users, setUsers } = useContext(appContext);
   const [msg, setMsg] = useState();
   const handleSubmit = () => {
     const found = users.find((value) => value.email === user.email);
+    Navigate("/");
     if (found) {
       setMsg("User already exists");
     } else {
