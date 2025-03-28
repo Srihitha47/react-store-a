@@ -5,8 +5,19 @@ import { Link } from "react-router-dom";
 export default function Register() {
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState({});
+  const[msg , setMsg]=useState();
   const handleSubmit = () => {
-    setUsers([...users, user]);
+    const found = users.find((value)=>value.email===user.email);
+    if(found){
+      setMsg("User already exist");
+
+    }
+    else{
+      setUsers([...users, user]);
+      setMsg();
+
+    }
+    
   };
   const handleDelete = (value) => {
     setUsers(users.filter((element) => element !== value));
@@ -20,6 +31,7 @@ export default function Register() {
     <div className="App-Row">
       <div>
         <h2>Registration Form</h2>
+        {msg}
         <p>
           <input
             type="text"
