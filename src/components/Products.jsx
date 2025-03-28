@@ -1,7 +1,11 @@
 import "./Products.css";
 import React from 'react'
+import { useContext } from "react";
+import { appContext } from "../App";
 
 export default function Products() {
+    const { user, setUser, users, setUsers } = useContext(appContext);
+    
     const products= [ 
 
         {
