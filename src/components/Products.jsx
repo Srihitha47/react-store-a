@@ -19,6 +19,7 @@ export default function Products() {
     
     ];
     return <div className="App-Products-Row">
+        <h3>{user.email}</h3>
         {products.map((value,index)=>(
             <div key={index} className="App-Products-Box">
                 <h3>{value.name}</h3>
