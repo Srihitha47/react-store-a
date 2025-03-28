@@ -10,6 +10,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 export const appContext = createContext();
 function App(props) {
   const [users, setUsers] = useState([]);
+  const[product,setproducts]=useState([]);
+  const[cart,setCart]=useState({});
   const [user, setUser] = useState({});
   return (
     <BrowserRouter>

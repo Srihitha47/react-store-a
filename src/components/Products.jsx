@@ -1,37 +1,30 @@
+import React from "react";
 import "./Products.css";
-import React from 'react'
-import { useContext } from "react";
 import { appContext } from "../App";
-
+import { useContext } from "react";
 export default function Products() {
-    const { user, setUser, users, setUsers } = useContext(appContext);
-    
-    
-    const products= [ 
-
-        {
-            id:1,"name": "product 1",cost:50
-        },
-        {id:2,"name":"product 2",cost:100},
-        {id:3,"name":"product 3",cost:250},
-        {id:4,"name":"product 4",cost:350},
-        {id:5,"name":"product 5",cost:450},
-        {id:6,"name":"product 6",cost:550},
-    
-    ];
-    return <div className="App-Products-Row">
-        <h3>{user.name}</h3>
-        {products.map((value,index)=>(
-            <div key={index} className="App-Products-Box">
-                <h3>{value.name}</h3>
-                <h4>{value.cost}</h4>
-                <button>Add to Cart</button></div>
-        ))}
-    </div>;
-    return (
-        <div className="App-products-row">
-      <div>Products</div>
-      </div>
-    )
-  }
-
+  const { user ,product,cart,setCart} = useContext(appContext);
+  const products = [
+    { id: 1, name: "Product 1", price: 56 },
+    { id: 2, name: "Product 2", price: 40 },
+    { id: 3, name: "Product 3", price: 35 },
+    { id: 4, name: "Product 4", price: 25 },
+    { id: 5, name: "Product 5", price: 95 },
+    { id: 6, name: "Product 6", price: 85 },
+  ];
+  return(
+  <>
+    <h3>Hello {user.name}</h3>
+    <div className="App-Products-Row">
+      {products.map((value, index) => (
+        <div key={index} className="App-Products-Box">
+          <h3>{value.name}</h3>
+          <h4>{value.price}</h4>
+          <button>Add to Cart</button>
+        </div>
+      ))}
+    </div>
+    ;
+  </>
+  )
+}
