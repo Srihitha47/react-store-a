@@ -17,6 +17,14 @@ export default function Login() {
       setMsg("Invalid Credentials");
     }
   };
+
+  // useEffect(()=>{
+  //   return()=>{
+  //     setUser({});
+  //   };
+
+  // },[]);
+
   return (
     <div>
       <h2>Login Form</h2>
