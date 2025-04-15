@@ -1,9 +1,9 @@
 import React from "react";
 import "./Products.css";
-import { appContext } from "../App";
+import { appContext } from "../App";//it order to access app.js
 import { useContext } from "react";
 export default function Products() {
-  const { user, products, cart, setCart } = useContext(appContext);
+  const { user, products, cart, setCart } = useContext(appContext); //which is used to call from APP.js i.e parent component
   const NAME=process.env.REACT_APP_NAME
   const COLOR=process.env.REACT_APP_COLOR
   const addToCart = (id) => {
